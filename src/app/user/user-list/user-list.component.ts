@@ -12,7 +12,7 @@ export class UserListComponent {
   locale: string= "en";
   substr: string= "";
 
-  sortCol: string = "username";
+  sortCol: string = "firstname";
   sortAsc: boolean = true;
 
   constructor(

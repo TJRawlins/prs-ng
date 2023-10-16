@@ -83,3 +83,8 @@ button {
     text-decoration: none;
     font-size: 0.75rem;
 }
+
+#login-error {
+    margin-top: 0.25rem;
+    color: red;
+}

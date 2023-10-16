@@ -18,6 +18,8 @@ import { SearchUserPipe } from './user/search-user.pipe';
 import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './core/about/about.component';
 import { E404Component } from './core/e404/e404.component';
+import { UserAddComponent } from './user/user-add/user-add.component';
+import { UserGetComponent } from './user/user-get/user-get.component';
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
   return () => sysSvc.getSettings();
@@ -35,7 +37,9 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     SearchUserPipe,
     HomeComponent,
     AboutComponent,
-    E404Component
+    E404Component,
+    UserAddComponent,
+    UserGetComponent
   ],
   imports: [
     BrowserModule, 

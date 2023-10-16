@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>CREATE USER</h3>
+        <div class="item">
+            <input type="text" name="" id="" [(ngModel)]="user.firstname" placeholder="Firstname">
+        </div>
+        <div class="item">
+            <input type="text" name="" id="" [(ngModel)]="user.lastname" placeholder="Lastname">
+        </div>
+            <div class="item">
+                <input type="text" name="" id="" [(ngModel)]="user.username" placeholder="Username">
+            </div>
+            <div class="item">
+                <input type="password" name="" id="" [(ngModel)]="user.password" placeholder="Password">
+            </div>
+            <div class="item">
+                <input type="text" name="" id="" [(ngModel)]="user.phone" placeholder="Phone">
+            </div>
+            <div class="item">
+                <input type="text" name="" id="" [(ngModel)]="user.email" placeholder="Email">
+            </div>
+            <div class="item item-checkbox">
+                <span class="checkbox-wrapper">
+                    <label for="">Reviewer:</label>
+                    <input type="checkbox" name="" id="" [(ngModel)]="user.isReviewer">
+                </span>
+                <span class="checkbox-wrapper">
+                    <label for="">Admin:</label>
+                    <input type="checkbox" name="" id="" [(ngModel)]="user.isAdmin">
+                </span>
+            </div>
+            <div id="btn-container">
+                <button class="btn btn-primary" (click)="addUser()">Create</button>
+                <button class="btn btn-primary" (click)="goBack()">Back</button>
+            </div>
+    </div>
+</div>

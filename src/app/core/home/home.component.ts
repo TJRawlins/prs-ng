@@ -7,7 +7,7 @@ import { SystemService } from '../system.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  emp = this.sysSvc.loggedInUser;
+  user = this.sysSvc.loggedInUser;
 
   constructor(
     private sysSvc: SystemService,
