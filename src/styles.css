@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: url("assets/imgs/sales-bg1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.btn-primary {
+    background-color: rgb(45, 121, 192);
+    border: 1px solid rgb(45, 121, 192);
+}
+
+.btn-primary:hover {
+    background-color: rgb(40, 106, 168);
+}
+
+.btn {
+    border-radius: 0 !important;
+}
