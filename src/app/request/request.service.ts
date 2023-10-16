@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { AppInitService } from '../app-init.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { SystemService } from '../core/system.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestService {
-  get url() {return `${this.init.config.baseurl}/api/orders`};
+  get url() {return `${this.sysSvc.config.baseurl}/api/orders`};
 
   constructor(
     private http: HttpClient,
-    private init: AppInitService
+    private sysSvc: SystemService
   ) { }
 
   list(): Observable<Request[]> {

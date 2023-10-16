@@ -1,20 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AppComponent } from '../app.component';
-import { AppInitService } from '../app-init.service';
 import { Observable } from 'rxjs';
 import { User } from './user.class';
+import { SystemService } from '../core/system.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  get url() {return `${this.init.config.baseurl}/api/users`};
+  get url() {return `${this.sysSvc.config.baseurl}/api/users`};
 
   constructor(
     private http: HttpClient,
-    private init: AppInitService 
+    private sysSvc: SystemService 
   ) { }
 
   list(): Observable<User[]> {

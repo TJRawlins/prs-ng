@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<div id="table-wrapper">
+    <div id="sub-menu">
+        <a routerLink="/users/add" id="add-user"><i class="fa-solid fa-user-plus"></i></a>
+        <div id="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" [(ngModel)]="substr" placeholder="Search">
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id<i class="fa-solid fa-sort" (click)="sortOrder('id')"></i></th>
+                <th>Username<i class="fa-solid fa-sort" (click)="sortOrder('username')"></i></th>
+                <th>Firstname<i class="fa-solid fa-sort" (click)="sortOrder('firstname')"></i></th>
+                <th>Lastname<i class="fa-solid fa-sort" (click)="sortOrder('lastname')"></i></th>
+                <th>Phone<i class="fa-solid fa-sort" (click)="sortOrder('phone')"></i></th>
+                <th>Email<i class="fa-solid fa-sort" (click)="sortOrder('email')"></i></th>
+                <th>Reviewer<i class="fa-solid fa-sort" (click)="sortOrder('isReviewer')"></i></th>
+                <th>Admin<i class="fa-solid fa-sort" (click)="sortOrder('isAdmin')"></i></th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users | searchUser:substr | sort:sortCol:sortAsc">
+            <!-- <tr *ngFor="let u of users | searchUser:substr"> -->
+                <td>{{u.id}}</td>
+                <td>{{u.username}}</td>
+                <td>{{u.firstname}}</td>
+                <td>{{u.lastname}}</td>
+                <td>{{u.phone}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.isReviewer | bool:locale}}</td>
+                <td>{{u.isAdmin | bool:locale}}</td>
+                <td><a [routerLink]="['/users/get/', u.id]">Details</a> | 
+                    <a [routerLink]="['/users/edit/', u.id]">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

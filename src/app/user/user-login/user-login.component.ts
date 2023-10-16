@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { User } from '../user.class';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
-import { SystemService } from 'src/app/system.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-user-login',
@@ -14,23 +14,21 @@ export class UserLoginComponent {
   message: string = "";
 
   constructor(
-    private userSvc: LoginService,
+    private loginSvc: LoginService,
     private sysSvc: SystemService,
     private router: Router
   ) {}
 
   login(): void {
-    console.debug("test")
     this.message = "";
     this.sysSvc.loggedInUser = null;
-    this.userSvc.loginSvc(this.user.password, this.user.password).subscribe({
+    this.loginSvc.loginSvc(this.user.username, this.user.password).subscribe({
       next: (res) => {
         this.sysSvc.loggedInUser = res;
         // this.router.navigateByUrl("/request-list");
-        this.router.navigateByUrl("/users");
+        this.router.navigateByUrl("/home");
       },
       error: (err) => err.status === 404 ? this.message = "Invalid username or password" : console.debug(err)
-    })
-    
+    });
   }
 }

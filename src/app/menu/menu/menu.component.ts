@@ -8,6 +8,8 @@ import { Menu } from '../menu.class'
 })
 export class MenuComponent {
   menus: Menu[] = [
-    new Menu("USERS", "/users")
+    new Menu("HOME", "/home"),
+    new Menu("USERS", "/users"),
+    new Menu("ABOUT", "/about")
   ];
 }

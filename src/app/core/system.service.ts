@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
+import { User } from '../user/user.class';
 import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AppInitService {
+export class SystemService {
+
+  loggedInUser: any = new User();
   config: any;
+
   constructor(
     private http: HttpClient
   ) { }
@@ -17,4 +22,5 @@ export class AppInitService {
       }
     )
   }
+
 }
