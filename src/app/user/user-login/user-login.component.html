@@ -1,1 +1,23 @@
-<p>user-login works!</p>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>SIGN IN</h3>
+        <div id="login-wrapper">
+            <div class="item">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" [(ngModel)]="user.username" placeholder="Username">
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" [(ngModel)]="user.password" placeholder="Password">
+            </div>
+        </div>
+        <div id="btn-container">
+            <button class="btn btn-primary" (click)="login()">Login</button>
+        </div>
+        <span>{{message}}</span>
+        <div id="link-wrapper">
+            <a href="/logout">Forgot password?</a>
+            <a href="/logout">Register</a>
+        </div>
+    </div>
+</div>

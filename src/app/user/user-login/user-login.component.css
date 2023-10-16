@@ -1,0 +1,85 @@
+#create-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 100vw;
+    height: 50vh;
+}
+
+#create-card {
+    background-color: white;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem;
+    height: fit-content;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid silver;
+}
+
+#create-card  {
+    margin-bottom: 2rem;
+}
+
+
+.item i {
+    font-size: 1.25rem;
+    color: rgb(45, 121, 192);
+    margin-right: 0.5rem;
+    margin-bottom: 0.45rem;;
+}
+
+.item input {
+    width: 100%;
+    justify-self: right;
+    border: none;
+    margin-bottom: 0.3rem;
+}
+
+.item input:focus {
+    outline: none;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+button {
+    width: 100%;
+}
+
+#link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+#link-wrapper a {
+    text-decoration: none;
+    font-size: 0.75rem;
+}
