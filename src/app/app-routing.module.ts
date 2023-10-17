@@ -20,8 +20,8 @@ const routes: Routes = [
   {path: "users/edit/:id", component: UserEditComponent},
   {path: "users", component: UserListComponent},
   {path: "requests", component: RequestListComponent},
-  {path:"about", component: AboutComponent},
-  {path:"**", component: E404Component}
+  {path: "about", component: AboutComponent},
+  {path: "**", component: E404Component}
 ]
 
 

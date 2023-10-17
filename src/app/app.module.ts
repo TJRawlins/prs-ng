@@ -21,6 +21,8 @@ import { E404Component } from './core/e404/e404.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserGetComponent } from './user/user-get/user-get.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { SearchRequestPipe } from './request/search-request.pipe';
+import { StatusColorDirective } from './request/status-color.directive';
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
   return () => sysSvc.getSettings();
@@ -41,7 +43,9 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     E404Component,
     UserAddComponent,
     UserGetComponent,
-    UserEditComponent
+    UserEditComponent,
+    SearchRequestPipe,
+    StatusColorDirective
   ],
   imports: [
     BrowserModule, 

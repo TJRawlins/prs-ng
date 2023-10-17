@@ -13,6 +13,7 @@ export class MenuComponent {
   menus: Menu[] = [
     new Menu("HOME", "/home"),
     new Menu("USERS", "/users"),
+    new Menu("REQUESTS", "/requests"),
     new Menu("ABOUT", "/about")
   ];
 
