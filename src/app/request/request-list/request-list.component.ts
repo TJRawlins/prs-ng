@@ -38,7 +38,7 @@ export class RequestListComponent {
   ngOnInit(): void {
     this.reqSvc.list().subscribe({
       next: (res) => {
-        console.debug(res)
+        // console.debug(res)
         this.reqs = res as Request[];
       },
       error: (err) => console.error(err)

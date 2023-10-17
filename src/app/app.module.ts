@@ -23,6 +23,9 @@ import { UserGetComponent } from './user/user-get/user-get.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { SearchRequestPipe } from './request/search-request.pipe';
 import { StatusColorDirective } from './request/status-color.directive';
+import { RequestAddComponent } from './request/request-add/request-add.component';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { SearchVendorPipe } from './vendor/search-vendor.pipe';
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
   return () => sysSvc.getSettings();
@@ -45,7 +48,10 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     UserGetComponent,
     UserEditComponent,
     SearchRequestPipe,
-    StatusColorDirective
+    StatusColorDirective,
+    RequestAddComponent,
+    VendorListComponent,
+    SearchVendorPipe
   ],
   imports: [
     BrowserModule, 
