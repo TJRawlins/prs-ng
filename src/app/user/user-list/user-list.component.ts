@@ -31,7 +31,7 @@ export class UserListComponent {
   ngOnInit(): void {
     this.userSvc.list().subscribe({
       next: (res) => {
-        console.debug(res)
+        // console.debug(res)
         this.users = res as User[]
       },
       error: (err) => console.error(err)

@@ -22,7 +22,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let r of reqs | searchRequest:substr | sort:sortCol:sortAsc">
+            <!-- <tr *ngFor="let r of reqs | searchRequest:substr | sort:sortCol:sortAsc"> -->
+            <tr *ngFor="let r of reqs">
                 <td>{{r.id}}</td>
                 <td>{{r.description}}</td>
                 <td>{{r.justification}}</td>
@@ -30,7 +31,7 @@
                 <td>{{r.deliveryMode}}</td>
                 <td appStatusColor class="status">{{r.status}}</td>
                 <td>{{r.total | currency}}</td>
-                <td>{{r.user?.firstname}}</td>
+                <td>{{r.user?.username}}</td>
                 <td><a [routerLink]="['/request/get/', r.id]">Details</a> | 
                     <a [routerLink]="['/request/edit/', r.id]">Edit</a> | 
                     <a [routerLink]="['/request/lines/', r.id]">Lines</a>

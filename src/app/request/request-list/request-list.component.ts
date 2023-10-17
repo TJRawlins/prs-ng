@@ -33,6 +33,8 @@ export class RequestListComponent {
     this.sortAsc = true
   }
 
+  // BUG: Not pulling the user
+  // FIXED: Added 'return await _context.Requests.Include(x => x.User).ToListAsync();' to Backend
   ngOnInit(): void {
     this.reqSvc.list().subscribe({
       next: (res) => {
