@@ -4,8 +4,9 @@
             <li *ngFor="let m of menus">
                 <a routerLink="{{m.route}}" [routerLinkActive]="['active']">{{m.display}}</a>
             </li>
-            <li>
-                <a routerLink="/login" [routerLinkActive]="['active']"><i class="fa-regular fa-user"></i>LOG OUT</a>
+            <li id="user-logout-items">
+                <div id="user-name"><i class="fa-regular fa-user"></i>Hello, {{user.firstname}}!</div>
+                <a routerLink="/login" [routerLinkActive]="['active']"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a>
             </li>
         </ul>
     </nav>

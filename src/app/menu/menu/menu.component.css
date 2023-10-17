@@ -32,8 +32,22 @@ nav ul li:last-child {
     
 }
 
-.fa-user {
-    margin-right: 1rem;
+#user-logout-items {
+    display: flex;
+}
+
+#user-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eeeeee;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    cursor: default;
+}
+
+#user-name .fa-user, .fa-arrow-right-from-bracket {
+    margin-right: 0.5rem;
 }
 
 .active {
