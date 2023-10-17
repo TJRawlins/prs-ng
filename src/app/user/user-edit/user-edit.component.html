@@ -1,1 +1,44 @@
-<p>user-edit works!</p>
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>{{user.firstname}} {{user.lastname}}</h3>
+        <div class="item">
+            <label for="">Firstname</label>
+            <input type="text" name="" id="" [(ngModel)]="user.firstname">
+        </div>
+        <div class="item">
+            <label for="">Lastname</label>
+            <input type="text" name="" id="" [(ngModel)]="user.lastname">
+        </div>
+        <div class="item">
+            <label for="">Username</label>
+            <input type="text" name="" id="" [(ngModel)]="user.username">
+        </div>
+        <div class="item">
+            <label for="">Password</label>
+            <input type="password" name="" id="" [(ngModel)]="user.password">
+        </div>
+        <div class="item">
+            <label for="">Phone</label>
+            <input type="text" name="" id="" [(ngModel)]="user.phone">
+        </div>
+        <div class="item">
+            <label for="">Email</label>
+            <input type="text" name="" id="" [(ngModel)]="user.email">
+        </div>
+        <div class="item item-checkbox">
+            <span class="checkbox-wrapper">
+                <label for="">Reviewer:</label>
+                <input type="checkbox" name="" id="" [(ngModel)]="user.isReviewer">
+            </span>
+            <span class="checkbox-wrapper">
+                <label for="">Admin:</label>
+                <input type="checkbox" name="" id="" [(ngModel)]="user.isAdmin">
+            </span>
+        </div>
+        <div id="btn-container">
+            <button class="btn btn-primary" (click)="save()">Submit</button>
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
+    </div>
+</div>
