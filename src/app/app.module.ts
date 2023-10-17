@@ -20,6 +20,7 @@ import { AboutComponent } from './core/about/about.component';
 import { E404Component } from './core/e404/e404.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
 import { UserGetComponent } from './user/user-get/user-get.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
   return () => sysSvc.getSettings();
@@ -39,7 +40,8 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     AboutComponent,
     E404Component,
     UserAddComponent,
-    UserGetComponent
+    UserGetComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule, 

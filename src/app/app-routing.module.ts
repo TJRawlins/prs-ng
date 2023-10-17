@@ -7,13 +7,17 @@ import { HomeComponent } from './core/home/home.component';
 import { AboutComponent } from './core/about/about.component';
 import { E404Component } from './core/e404/e404.component';
 import { UserAddComponent } from './user/user-add/user-add.component';
+import { UserGetComponent } from './user/user-get/user-get.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/login", pathMatch:"full"},
   {path: "login", component: UserLoginComponent},
-  {path:"home", component: HomeComponent},
+  {path: "home", component: HomeComponent},
   {path: "users", component: UserListComponent},
   {path: "users/add", component: UserAddComponent},
+  {path: "users/get/:id", component: UserGetComponent},
+  {path: "users/edit/:id", component: UserEditComponent},
   {path: "users", component: UserListComponent},
   {path: "requests", component: RequestListComponent},
   {path:"about", component: AboutComponent},

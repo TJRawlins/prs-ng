@@ -6,6 +6,7 @@
     background-color: rgb(40, 106, 168);
     padding: 0.5rem 1rem ;
     gap: 0.5rem;
+    z-index: 999;
 }
 
 #title-wrapper i {

@@ -5,6 +5,7 @@
 nav {
     background-color: rgb(45, 121, 192);
     width: 100%;
+    z-index: 999;
 }
 
 nav ul {
