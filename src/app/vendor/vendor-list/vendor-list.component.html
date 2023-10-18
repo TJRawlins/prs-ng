@@ -1,1 +1,42 @@
-<p>vendor-list works!</p>
+<app-menu></app-menu>
+<div id="table-wrapper">
+    <div id="sub-menu">
+        <a routerLink="/vendors/add" id="add-entity"><i class="fa-solid fa-user-plus"></i></a>
+        <div id="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" [(ngModel)]="substr" placeholder="Search">
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id<i class="fa-solid fa-sort" (click)="sortOrder('id')"></i></th>
+                <th>Code<i class="fa-solid fa-sort" (click)="sortOrder('code')"></i></th>
+                <th>Name<i class="fa-solid fa-sort" (click)="sortOrder('name')"></i></th>
+                <th>Address<i class="fa-solid fa-sort" (click)="sortOrder('address')"></i></th>
+                <th>City<i class="fa-solid fa-sort" (click)="sortOrder('city')"></i></th>
+                <th>State<i class="fa-solid fa-sort" (click)="sortOrder('state')"></i></th>
+                <th>Zip<i class="fa-solid fa-sort" (click)="sortOrder('zip')"></i></th>
+                <th>Phone<i class="fa-solid fa-sort" (click)="sortOrder('phone')"></i></th>
+                <th>Email<i class="fa-solid fa-sort" (click)="sortOrder('email')"></i></th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of vends | searchVendor:substr | sort:sortCol:sortAsc">
+                <td>{{v.id}}</td>
+                <td>{{v.code}}</td>
+                <td>{{v.name}}</td>
+                <td>{{v.address}}</td>
+                <td>{{v.city}}</td>
+                <td>{{v.state}}</td>
+                <td>{{v.zip}}</td>
+                <td>{{v.phone}}</td>
+                <td>{{v.email}}</td>
+                <td><a [routerLink]="['/vendors/get/', v.id]">Details</a> | 
+                    <a [routerLink]="['/vendors/edit/', v.id]">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

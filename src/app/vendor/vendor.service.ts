@@ -9,7 +9,7 @@ import { Vendor } from './vendor.class';
 })
 export class VendorService {
 
-  get url() {return `${this.sysSvc.config.baseurl}/api/users`};
+  get url() {return `${this.sysSvc.config.baseurl}/api/vendors`};
 
   constructor(
     private http: HttpClient,
