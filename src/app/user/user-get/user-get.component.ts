@@ -20,7 +20,7 @@ export class UserGetComponent {
   removeUser(): void {
     let id = +this.route.snapshot.params['id'];
     this.userSvc.remove(id).subscribe({
-      next: (res) => {
+      next: () => {
         this.router.navigateByUrl('/users')
       },
       error: (err) => console.error(err)
@@ -44,7 +44,6 @@ export class UserGetComponent {
       },
       error: (err) => console.error(err)
     })
-
   }
 
 }
