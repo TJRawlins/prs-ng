@@ -17,7 +17,7 @@ export class RequestListComponent {
   userId: number = 0;
   user: User | null = null;
 
-  sortCol: string = "status";
+  sortCol: string = "description";
   sortAsc: boolean = true;
 
   constructor(
