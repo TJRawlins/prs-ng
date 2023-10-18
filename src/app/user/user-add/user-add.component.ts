@@ -22,7 +22,7 @@ export class UserAddComponent {
 
   addUser(): void {
     this.userSvc.create(this.user).subscribe({
-      next: (res) => {
+      next: () => {
         this.router.navigateByUrl("/users")
       },
       error: (err) => console.error(err)

@@ -1,0 +1,34 @@
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>CREATE VENDOR</h3>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.code" placeholder="Code">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.name" placeholder="Name">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.address" placeholder="Street Address">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.city" placeholder="City">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.state" placeholder="State">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.zip" placeholder="Zip">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.phone" placeholder="Phone">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="vend.email" placeholder="Email">
+        </div>
+        <div id="btn-container">
+            <button class="btn btn-primary" (click)="addVendor()">Create</button>
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
+    </div>
+</div>

@@ -26,6 +26,7 @@ import { StatusColorDirective } from './request/status-color.directive';
 import { RequestAddComponent } from './request/request-add/request-add.component';
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
 import { SearchVendorPipe } from './vendor/search-vendor.pipe';
+import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
   return () => sysSvc.getSettings();
@@ -51,7 +52,8 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     StatusColorDirective,
     RequestAddComponent,
     VendorListComponent,
-    SearchVendorPipe
+    SearchVendorPipe,
+    VendorAddComponent
   ],
   imports: [
     BrowserModule, 

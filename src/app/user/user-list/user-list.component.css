@@ -16,14 +16,14 @@ a {
     color: rgb(45, 121, 192);
 }
 
-a#add-user {
+a#add-entity {
     text-decoration: none;
     color: #eeeeee;
     font-weight: bold;
     padding: 0.5rem;
 }
 
-a#add-user:hover {
+a#add-entity:hover {
     color: #ffffff;;
 }
 

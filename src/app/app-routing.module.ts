@@ -11,6 +11,7 @@ import { UserGetComponent } from './user/user-get/user-get.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { RequestAddComponent } from './request/request-add/request-add.component';
 import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/login", pathMatch:"full"},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: "users/edit/:id", component: UserEditComponent},
   {path: "users", component: UserListComponent},
   {path: "vendors", component: VendorListComponent},
+  {path: "vendors/add", component: VendorAddComponent},
   {path: "requests", component: RequestListComponent},
   {path: "requests/add", component: RequestAddComponent},
   {path: "about", component: AboutComponent},

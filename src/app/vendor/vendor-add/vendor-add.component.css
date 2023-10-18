@@ -1,0 +1,74 @@
+#create-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 100vw;
+    height: 50vh;
+}
+
+#create-card {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 370px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem;
+    height: fit-content;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-weight: 600;
+}
+
+.item {
+    padding: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid silver;
+    width: 280px;
+}
+.item label {
+    color: rgb(45, 121, 192);;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.item input {
+    width: 180px;
+    border: none;
+    margin-bottom: 0.3rem;
+    width: 100%;
+}
+
+.item input:focus {
+    outline: none;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: space-arou;
+    gap: 1rem;
+    width: 100%;
+}
+
+button, a {
+    justify-content: flex-start !important;
+    width: 100%;
+}
+
+a {
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+}
