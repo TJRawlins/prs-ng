@@ -101,3 +101,8 @@ a#add-user:hover {
 .status-rejected {    
     color: rgb(158, 30, 30);
 }
+
+#reject-reason {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
