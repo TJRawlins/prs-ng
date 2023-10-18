@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>{{vend.name}}</h3>
+        <div class="item">
+            <label for="">Code</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.code">
+        </div>
+        <div class="item">
+            <label for="">Name</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.name">
+        </div>
+        <div class="item">
+            <label for="">Address</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.address">
+        </div>
+        <div class="item">
+            <label for="">City</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.city">
+        </div>
+        <div class="item">
+            <label for="">State</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.state">
+        </div>
+        <div class="item">
+            <label for="">Zip</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.zip">
+        </div>
+        <div class="item">
+            <label for="">Phone</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.phone">
+        </div>
+        <div class="item">
+            <label for="">Email</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.email">
+        </div>
+        <div id="btn-container">
+            <button class="btn btn-primary" (click)="save()">Submit</button>
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
+    </div>
+</div>
