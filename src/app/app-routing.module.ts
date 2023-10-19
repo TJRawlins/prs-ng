@@ -17,6 +17,8 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
 import { RequestGetComponent } from './request/request-get/request-get.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { RequestlineAddComponent } from './requestline/requestline-add/requestline-add.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/login", pathMatch:"full"},
@@ -36,6 +38,8 @@ const routes: Routes = [
   {path: "requests/get/:id", component: RequestGetComponent},
   {path: "requests/edit/:id", component: RequestEditComponent},
   {path: "requests/lines/:id", component: RequestLinesComponent},
+  {path: "requestlines/add/:rid", component: RequestlineAddComponent},
+  {path: "requestlines/edit/:id", component: RequestlineEditComponent},
   {path: "about", component: AboutComponent},
   {path: "**", component: E404Component}
 ]

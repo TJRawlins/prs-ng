@@ -33,6 +33,8 @@ import { RequestEditComponent } from './request/request-edit/request-edit.compon
 import { RequestGetComponent } from './request/request-get/request-get.component';
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { RequestlineAddComponent } from './requestline/requestline-add/requestline-add.component';
+import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
@@ -67,6 +69,8 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     RequestGetComponent,
     RequestLinesComponent,
     ProductListComponent,
+    RequestlineAddComponent,
+    RequestlineEditComponent,
   ],
   imports: [
     BrowserModule, 

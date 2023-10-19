@@ -1,0 +1,24 @@
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>CREATE REQUEST LINE</h3>
+            <div class="item">
+                <label for="">Id:</label>
+                <input class="readonly" type="number" name="" id="" [(ngModel)]="rl.id" readonly>
+            </div>
+            <div class="item">
+                <label for="">Product:</label>
+                <select type="text" name="" id="" [(ngModel)]="rl.productId" >
+                    <option *ngFor="let p of products" value="{{p.id}}">{{p.name}}</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="">Quantity:</label>
+                <input type="number" name="" id="" [(ngModel)]="rl.quantity">
+            </div>
+            <div id="btn-container">
+                <button class="btn btn-primary" (click)="addRl()">Create</button>
+                <button class="btn btn-primary" (click)="goBack()">Back</button>
+            </div>
+    </div>
+</div>
