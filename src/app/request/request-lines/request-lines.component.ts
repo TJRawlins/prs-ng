@@ -45,6 +45,20 @@ export class RequestLinesComponent {
   toggleHide(i:number) {
     document.querySelectorAll('.confirm')[i].classList.toggle('hide')
   }
+
+  approve(): void {
+    let statusEl = document.getElementById('status')
+    this.reqSvc.approve(this.req).subscribe({
+      next: () => {
+        console.debug("Order status APPROVED!");
+        statusEl!.classList.remove('status-rejected')
+        statusEl!.classList.add('status-approved')
+        statusEl!.classList.remove('status-review')
+        this.refresh();
+      },
+      error: (err) => console.error(err)
+    })
+  }
   
   review(): void {
     let statusEl = document.getElementById('status')
@@ -54,6 +68,20 @@ export class RequestLinesComponent {
         statusEl!.classList.remove('status-rejected')
         statusEl!.classList.remove('status-approved')
         statusEl!.classList.add('status-review')
+        this.refresh();
+      },
+      error: (err) => console.error(err)
+    })
+  }
+
+  reject(): void {
+    let statusEl = document.getElementById('status')
+    this.reqSvc.reject(this.req).subscribe({
+      next: () => {
+        console.debug("Request status REVIEW!");
+        statusEl!.classList.add('status-rejected')
+        statusEl!.classList.remove('status-approved')
+        statusEl!.classList.remove('status-review')
         this.refresh();
       },
       error: (err) => console.error(err)

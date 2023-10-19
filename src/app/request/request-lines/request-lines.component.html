@@ -18,7 +18,9 @@
                 <td><div>Total: </div><div class="div-data">{{req.total | currency}}</div></td>
                 <td><div>User: </div><div class="div-data">{{user.firstname + ' ' + user.lastname}}</div></td>
                 <td>
+                    <span class="btn-span"><button (click)="approve()" class="btn-circle stat-green">APPROVE</button></span>
                     <span class="btn-span"><button (click)="review()" class="btn-circle stat-orange">REVIEW</button></span>
+                    <span class="btn-span"><button (click)="reject()" class="btn-circle stat-red">REJECT</button></span>
                 </td>
             </tr>
         </tbody>
