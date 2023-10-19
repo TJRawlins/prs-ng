@@ -1,1 +1,31 @@
-<p>product-list works!</p>
+<app-menu></app-menu>
+<div id="table-wrapper">
+    <div id="sub-menu">
+        <a id="add-user" routerLink="/products/add"><i class="fa-solid fa-plus"></i></a>
+        <div id="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" [(ngModel)]="substr" placeholder="Search">
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id<i class="fa-solid fa-sort" (click)="sortOrder('id')"></i></th>
+                <th>Name<i class="fa-solid fa-sort" (click)="sortOrder('name')"></i></th>
+                <th>Price<i class="fa-solid fa-sort" (click)="sortOrder('price')"></i></th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of prods | searchProduct:substr | sort:sortCol:sortAsc">
+            <!-- <tr *ngFor="let p of prods | sort:sortCol:sortAsc"> -->
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.price | currency}}</td>
+                <td><a [routerLink]="['/products/get/', p.id]">Details</a> | 
+                    <a [routerLink]="['/products/edit/', p.id]">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
