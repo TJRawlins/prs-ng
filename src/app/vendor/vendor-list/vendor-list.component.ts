@@ -29,7 +29,7 @@ export class VendorListComponent {
   ngOnInit(): void {
     this.vendSvc.list().subscribe({
       next: (res) => {
-        console.debug(res)
+        // console.debug(res)
         this.vends = res as Vendor[]
       },
       error: (err) => console.error(err)

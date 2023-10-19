@@ -29,6 +29,8 @@ import { SearchVendorPipe } from './vendor/search-vendor.pipe';
 import { VendorAddComponent } from './vendor/vendor-add/vendor-add.component';
 import { VendorGetComponent } from './vendor/vendor-get/vendor-get.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestGetComponent } from './request/request-get/request-get.component';
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
   return () => sysSvc.getSettings();
@@ -57,7 +59,9 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     SearchVendorPipe,
     VendorAddComponent,
     VendorGetComponent,
-    VendorEditComponent
+    VendorEditComponent,
+    RequestEditComponent,
+    RequestGetComponent
   ],
   imports: [
     BrowserModule, 

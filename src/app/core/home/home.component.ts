@@ -13,5 +13,4 @@ export class HomeComponent {
     private sysSvc: SystemService,
   ) {}
 
-
 }
