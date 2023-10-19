@@ -42,20 +42,24 @@ export class RequestGetComponent {
     this.toggleOn = !this.toggleOn;
   }
 
+  getUser(id: number): void {
+    this.userSvc.get(this.userId).subscribe({
+      next: (res) => {
+        this.user = res
+        console.debug(this.user)
+      },
+      error: (err) => console.error(err)
+    })
+  }
+
   ngOnInit(): void {
     let id = +this.route.snapshot.params['id'];
     this.reqSvc.get(id).subscribe({
       next: (res) => {
         this.req = res as Request;
-        this.userId = res.userId as number;
         
-        this.userSvc.get(this.userId).subscribe({
-          next: (res) => {
-            this.user = res
-            console.debug(this.user)
-          },
-          error: (err) => console.error(err)
-        })
+        this.userId = res.userId as number;
+        this.getUser(this.userId)
         
       },
       error: (err) => console.error(err)

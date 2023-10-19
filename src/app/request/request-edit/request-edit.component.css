@@ -1,0 +1,84 @@
+#create-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 100vw;
+    height: 50vh;
+}
+
+#create-card {
+    background-color: white;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem;
+    height: fit-content;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem;
+}
+
+.item-active {
+    width: 20%;
+}
+
+.item input {
+    margin-left: 1rem;
+    justify-self: right;
+}
+
+#btn-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#del-btn-wrapper {
+    width: 115%;
+    margin: 0;
+    padding: 0;
+}
+
+button, a {
+    width: 100%;
+}
+
+a {
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+}
+
+.btn-warning {
+    color: rgb(158, 84, 0);
+    border: 1px solid rgb(158, 84, 0);
+}
+.btn-warning:hover {
+    color: rgb(131, 70, 1);
+}
+
+.hide {
+    display: none;
+}
+
+input, input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid silver;
+}
+
+.item input.readonly {
+    color: silver;
+}

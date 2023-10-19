@@ -1,1 +1,43 @@
-<p>request-edit works!</p>
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>{{req.description}}</h3>
+        <div class="item">
+            <label for="">Id:</label>
+            <input class="readonly" type="text" [(ngModel)]="req.id" readonly>
+        </div>
+        <div class="item">
+            <label for="">Description:</label>
+            <input type="text" [(ngModel)]="req.description">
+        </div>
+        <div class="item">
+            <label for="">Justification:</label>
+            <input type="text" [(ngModel)]="req.justification">
+        </div>
+        <div class="item">
+            <label for="">Delivery Mode:</label>
+            <input type="text" [(ngModel)]="req.deliveryMode">
+        </div>
+        <!-- <div class="item">
+            <label for="">Rejection Reason:</label>
+            <input class="readonly" type="text" [(ngModel)]="req.rejectionReason" readonly>
+        </div> -->
+        <div class="item">
+            <label for="">Status:</label>
+            <input class="readonly" type="text" [(ngModel)]="req.status" readonly>
+        </div>
+        <div class="item">
+            <label for="">Total:</label>
+            <input class="readonly" type="text" ngModel="{{req.total | currency}}" readonly>
+        </div>
+        <div class="item">
+            <label for="">User:</label>
+            <input class="readonly" type="text" [(ngModel)]="user.firstname + ' ' + user.lastname"  readonly>
+        </div>
+        
+        <div id="btn-container">
+            <button class="btn btn-primary" (click)="save()">Submit</button>
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
+    </div>
+</div>
