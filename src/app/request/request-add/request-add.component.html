@@ -2,37 +2,29 @@
 <div id="create-wrapper">
     <div id="create-card">
         <h3>CREATE REQUEST</h3>
-        <!-- <div class="item">
-            <input type="text" name="" id="" [(ngModel)]="user.firstname" placeholder="Firstname">
+        <div class="item">
+            <input type="text" [(ngModel)]="req.description" placeholder="Description">
         </div>
         <div class="item">
-            <input type="text" name="" id="" [(ngModel)]="user.lastname" placeholder="Lastname">
+            <input type="text" [(ngModel)]="req.justification" placeholder="Justification">
         </div>
-            <div class="item">
-                <input type="text" name="" id="" [(ngModel)]="user.username" placeholder="Username">
-            </div>
-            <div class="item">
-                <input type="password" name="" id="" [(ngModel)]="user.password" placeholder="Password">
-            </div>
-            <div class="item">
-                <input type="text" name="" id="" [(ngModel)]="user.phone" placeholder="Phone">
-            </div>
-            <div class="item">
-                <input type="text" name="" id="" [(ngModel)]="user.email" placeholder="Email">
-            </div>
-            <div class="item item-checkbox">
-                <span class="checkbox-wrapper">
-                    <label for="">Reviewer:</label>
-                    <input type="checkbox" name="" id="" [(ngModel)]="user.isReviewer">
-                </span>
-                <span class="checkbox-wrapper">
-                    <label for="">Admin:</label>
-                    <input type="checkbox" name="" id="" [(ngModel)]="user.isAdmin">
-                </span>
-            </div>
-            <div id="btn-container">
-                <button class="btn btn-primary" (click)="addUser()">Create</button>
-                <button class="btn btn-primary" (click)="goBack()">Back</button>
-            </div> -->
+        <div class="item">
+            <input type="text" [(ngModel)]="req.deliveryMode" placeholder="Delivery Mode">
+        </div>
+        <div class="item">
+            <input class="readonly" type="text" [(ngModel)]="req.status" placeholder="Status" readonly>
+        </div>
+        <div class="item">
+            <input class="readonly"  type="text" [(ngModel)]="req.total" placeholder="Total" readonly>
+        </div>
+        <div class="item">
+            <select type="text" [(ngModel)]="req.userId">
+                <option *ngFor="let u of users" value="{{u.id}}">{{u.firstname}} {{u.lastname}}</option>
+            </select>
+        </div>
+        <div id="btn-container">
+            <button class="btn btn-primary" (click)="addReq()">Create</button>
+            <button class="btn btn-primary" (click)="goBack()">Back</button>
+        </div>
     </div>
 </div>
