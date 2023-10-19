@@ -10,6 +10,7 @@ import { SystemService } from '../core/system.service';
 export class RequestService {
 
   get url() {return `${this.sysSvc.config.baseurl}/api/requests`};
+  // url: string = "http://localhost:5555/api/requests"
 
   constructor(
     private http: HttpClient,

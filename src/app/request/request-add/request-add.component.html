@@ -18,9 +18,7 @@
             <input class="readonly"  type="text" [(ngModel)]="req.total" placeholder="Total" readonly>
         </div>
         <div class="item">
-            <select type="text" [(ngModel)]="req.userId">
-                <option *ngFor="let u of users" value="{{u.id}}">{{u.firstname}} {{u.lastname}}</option>
-            </select>
+            <input class="readonly"  type="text" [(ngModel)]="user.firstname + ' ' + user.lastname" placeholder="User" readonly>
         </div>
         <div id="btn-container">
             <button class="btn btn-primary" (click)="addReq()">Create</button>

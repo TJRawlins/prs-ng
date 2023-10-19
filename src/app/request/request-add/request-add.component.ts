@@ -4,6 +4,7 @@ import { RequestService } from '../request.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/user/user.class';
 import { UserService } from 'src/app/user/user.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-request-add',
@@ -12,15 +13,20 @@ import { UserService } from 'src/app/user/user.service';
 })
 export class RequestAddComponent {
   req: Request = new Request();
-  users!: User[];
+  user!: User;
+  uId = this.sysSvc.loggedInUser.id;
+
 
   constructor(
     private reqSvc: RequestService,
     private router: Router,
+    private sysSvc: SystemService,
     private userSvc: UserService
   ) {}
 
   addReq(): void {
+    this.req.userId = this.uId
+    console.debug(this.req)
     this.reqSvc.create(this.req).subscribe({
       next: () => {
         this.router.navigateByUrl("/requests");
@@ -34,12 +40,13 @@ export class RequestAddComponent {
   }
 
   ngOnInit(): void {
-    this.userSvc.list().subscribe({
+    let id = this.uId
+    console.log(this.uId)
+    this.userSvc.get(id).subscribe({
       next: (res) => {
-        this.users = res;
+        this.user = res;
       },
       error: (err) => console.error(err)
     })
   }
-
 }
