@@ -32,9 +32,9 @@
                 <td appStatusColor class="status">{{r.status}}</td>
                 <td>{{r.total | currency}}</td>
                 <td>{{r.user?.username}}</td>
-                <td><a [routerLink]="['/request/get/', r.id]">Details</a> | 
-                    <a [routerLink]="['/request/edit/', r.id]">Edit</a> | 
-                    <a [routerLink]="['/request/lines/', r.id]">Lines</a>
+                <td><a [routerLink]="['/requests/get/', r.id]">Details</a> | 
+                    <a [routerLink]="['/requests/edit/', r.id]">Edit</a> | 
+                    <a [routerLink]="['/requests/lines/', r.id]">Lines</a>
                 </td>
             </tr>
         </tbody>

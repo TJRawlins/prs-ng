@@ -1,1 +1,41 @@
-<p>request-get works!</p>
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>{{req.description}}</h3>
+        <div class="item">
+            <label for="">Id:</label>
+            <input type="text" name="" id="" [(ngModel)]="req.id" readonly>
+        </div>
+        <div class="item">
+            <label for="">Justification:</label>
+            <input type="text" name="" id="" [(ngModel)]="req.justification" readonly>
+        </div>
+        <div class="item">
+            <label for="">Rejection Reason:</label>
+            <input type="text" name="" id="" [(ngModel)]="req.rejectionReason" readonly>
+        </div>
+        <div class="item">
+            <label for="">Delivery Mode:</label>
+            <input type="text" name="" id="" [(ngModel)]="req.deliveryMode" readonly>
+        </div>
+        <div class="item">
+            <label for="">Status:</label>
+            <input type="text" name="" id="" [(ngModel)]="req.status" readonly>
+        </div>
+        <div class="item">
+            <label for="">Total:</label>
+            <input type="text" name="" id="" ngModel="{{req.total | currency}}" readonly>
+        </div>
+        <div class="item">
+            <label for="">User:</label>
+            <input type="text" [(ngModel)]="user.firstname + ' ' + user.lastname"  readonly>
+        </div>
+        <div id="btn-container">
+            <button class="btn btn-primary"><a [routerLink]="['/requests/edit/', req.id]">Edit</a></button>
+            <div id="del-btn-wrapper">
+                <button class="btn btn-danger" [class.hide]="toggleOn == true" (click)="toggleHide()">Delete</button>
+                <button class="btn btn-warning hide" (click)="removeRequest()" [class.hide]="toggleOn == false" (click)="toggleHide()">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
