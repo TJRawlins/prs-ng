@@ -20,6 +20,7 @@ import { RequestLinesComponent } from './request/request-lines/request-lines.com
 import { RequestlineAddComponent } from './requestline/requestline-add/requestline-add.component';
 import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductAddComponent } from './product/product-add/product-add.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/login", pathMatch:"full"},
@@ -42,6 +43,7 @@ const routes: Routes = [
   {path: "requestlines/add/:rid", component: RequestlineAddComponent},
   {path: "requestlines/edit/:rid", component: RequestlineEditComponent},
   {path: "products", component: ProductListComponent},
+  {path: "products/add", component: ProductAddComponent},
   {path: "about", component: AboutComponent},
   {path: "**", component: E404Component}
 ]

@@ -11,7 +11,9 @@
         <thead>
             <tr>
                 <th>Id<i class="fa-solid fa-sort" (click)="sortOrder('id')"></i></th>
+                <th>Part Number<i class="fa-solid fa-sort" (click)="sortOrder('partNbr')"></i></th>
                 <th>Name<i class="fa-solid fa-sort" (click)="sortOrder('name')"></i></th>
+                <th>Unit<i class="fa-solid fa-sort" (click)="sortOrder('unit')"></i></th>
                 <th>Price<i class="fa-solid fa-sort" (click)="sortOrder('price')"></i></th>
                 <th>Actions</th>
             </tr>
@@ -20,7 +22,9 @@
             <tr *ngFor="let p of prods | searchProduct:substr | sort:sortCol:sortAsc">
             <!-- <tr *ngFor="let p of prods | sort:sortCol:sortAsc"> -->
                 <td>{{p.id}}</td>
+                <td>{{p.partNbr}}</td>
                 <td>{{p.name}}</td>
+                <td>{{p.unit}}</td>
                 <td>{{p.price | currency}}</td>
                 <td><a [routerLink]="['/products/get/', p.id]">Details</a> | 
                     <a [routerLink]="['/products/edit/', p.id]">Edit</a>

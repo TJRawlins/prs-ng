@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>CREATE PRODUCT</h3>
+        <div class="item">
+            <input type="text" [(ngModel)]="prod.partNbr" placeholder="Part Number">
+        </div>
+        <div class="item">
+            <input type="text" [(ngModel)]="prod.name" placeholder="Name">
+        </div>
+            <div class="item">
+                <input type="text" [(ngModel)]="prod.price" placeholder="Price">
+            </div>
+            <div class="item">
+                <input type="text" [(ngModel)]="prod.unit" placeholder="Unit">
+            </div>
+            <div class="item">
+                <input type="text" [(ngModel)]="prod.photoPath" placeholder="Photo Path">
+            </div>
+            <div class="item" id="item-select">
+                <select type="text" name="" id="" [(ngModel)]="prod.vendorId">
+                    <option *ngFor="let v of vends" value="{{v.id}}">{{v.name}}</option>
+                </select>
+            </div>
+            <div id="btn-container">
+                <button class="btn btn-primary" (click)="addProd()">Create</button>
+                <button class="btn btn-primary" (click)="goBack()">Back</button>
+            </div>
+    </div>
+</div>
