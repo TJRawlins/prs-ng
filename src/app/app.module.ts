@@ -37,6 +37,7 @@ import { RequestlineAddComponent } from './requestline/requestline-add/requestli
 import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 import { SearchProductPipe } from './product/search-product.pipe';
 import { ProductAddComponent } from './product/product-add/product-add.component';
+import { ProductGetComponent } from './product/product-get/product-get.component';
 
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
@@ -75,6 +76,7 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     RequestlineEditComponent,
     SearchProductPipe,
     ProductAddComponent,
+    ProductGetComponent,
   ],
   imports: [
     BrowserModule, 

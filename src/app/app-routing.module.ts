@@ -21,6 +21,7 @@ import { RequestlineAddComponent } from './requestline/requestline-add/requestli
 import { RequestlineEditComponent } from './requestline/requestline-edit/requestline-edit.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductAddComponent } from './product/product-add/product-add.component';
+import { ProductGetComponent } from './product/product-get/product-get.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/login", pathMatch:"full"},
@@ -44,6 +45,7 @@ const routes: Routes = [
   {path: "requestlines/edit/:rid", component: RequestlineEditComponent},
   {path: "products", component: ProductListComponent},
   {path: "products/add", component: ProductAddComponent},
+  {path: "products/get/:id", component: ProductGetComponent},
   {path: "about", component: AboutComponent},
   {path: "**", component: E404Component}
 ]

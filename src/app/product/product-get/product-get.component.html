@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+<div id="create-wrapper">
+    <div id="create-card">
+        <h3>{{prod.name}}</h3>
+        <div class="item">
+            <label for="">Part Number</label>
+            <input type="text" name="" id="" [(ngModel)]="prod.partNbr" readonly>
+        </div>
+        <div class="item">
+            <label for="">Name</label>
+            <input type="text" name="" id="" [(ngModel)]="prod.name" readonly>
+        </div>
+        <div class="item">
+            <label for="">Price</label>
+            <input type="text" name="" id="" ngModel="{{prod.price | currency}}" readonly>
+        </div>
+        <div class="item">
+            <label for="">Unit</label>
+            <input type="text" name="" id="" [(ngModel)]="prod.unit" readonly>
+        </div>
+        <div class="item">
+            <label for="">PhotoPath</label>
+            <input type="text" name="" id="" [(ngModel)]="prod.photoPath" readonly>
+        </div>
+        <div class="item">
+            <label for="">Vendor</label>
+            <input type="text" name="" id="" [(ngModel)]="vend.name "  readonly>
+        </div>
+        <div id="btn-container">
+            <button class="btn btn-primary"><a [routerLink]="['/products/edit/', prod.id]">Edit</a></button>
+            <div id="del-btn-wrapper">
+                <button class="btn btn-danger" [class.hide]="toggleOn == true" (click)="toggleHide()">Delete</button>
+                <button class="btn btn-warning hide" (click)="removeProd()" [class.hide]="toggleOn == false" (click)="toggleHide()">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
