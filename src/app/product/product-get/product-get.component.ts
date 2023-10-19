@@ -27,7 +27,7 @@ export class ProductGetComponent {
     let id = +this.route.snapshot.params['id'];
     this.prodSvc.remove(id).subscribe({
       next: () => {
-        this.router.navigateByUrl('/users')
+        this.router.navigateByUrl('/products')
       },
       error: (err) => console.error(err)
     })
