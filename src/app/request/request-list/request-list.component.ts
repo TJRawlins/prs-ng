@@ -26,6 +26,7 @@ export class RequestListComponent {
 
   sortOrder(col: string): void {
     if(col === this.sortCol) {
+      // console.debug(this.sortCol)
       this.sortAsc = !this.sortAsc
       return;
     }

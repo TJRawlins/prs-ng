@@ -11,7 +11,13 @@ export class SortPipe implements PipeTransform {
     const compareFn = (a: any, b: any): number => {
       let x = null;
       let y = null;
-      if(a[column]) {
+      if(a[column].username)
+      {
+        x = a[column].username.toString().toLowerCase();
+        y = b[column].username.toString().toLowerCase();
+        console.debug(a[column].username)
+      }
+      else if(a[column]) {
         x = a[column].toString().toLowerCase();
         y = b[column].toString().toLowerCase();
       }
