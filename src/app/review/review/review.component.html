@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<div id="table-wrapper">
+    <div id="sub-menu">
+        <a id="add-user" routerLink="/requests/add"><i class="fa-solid fa-plus"></i></a>
+        <div id="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" [(ngModel)]="substr" placeholder="Search">
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id<i class="fa-solid fa-sort" (click)="sortOrder('id')"></i></th>
+                <th>Description<i class="fa-solid fa-sort" (click)="sortOrder('description')"></i></th>
+                <th>Justification<i class="fa-solid fa-sort" (click)="sortOrder('justification')"></i></th>
+                <th>Rejection Reason<i class="fa-solid fa-sort" (click)="sortOrder('rejectionReason')"></i></th>
+                <th>Delivery Mode<i class="fa-solid fa-sort" (click)="sortOrder('deliveryMode')"></i></th>
+                <th>Status<i class="fa-solid fa-sort" (click)="sortOrder('status')"></i></th>
+                <th>Total<i class="fa-solid fa-sort" (click)="sortOrder('total')"></i></th>
+                <th>User<i class="fa-solid fa-sort" (click)="sortOrder('user')"></i></th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of reqs | searchRequest:substr | sort:sortCol:sortAsc">
+            <!-- <tr *ngFor="let r of reqs"> -->
+                <td>{{r.id}}</td>
+                <td>{{r.description}}</td>
+                <td>{{r.justification}}</td>
+                <td class="status-rejected" id="reject-reason">{{r.rejectionReason}}</td>
+                <td>{{r.deliveryMode}}</td>
+                <td appStatusColor class="status">{{r.status}}</td>
+                <td>{{r.total | currency}}</td>
+                <td>{{r.user?.username}}</td>
+                <td>
+                    <a [routerLink]="['/requests/reviews/', r.id]">Review</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

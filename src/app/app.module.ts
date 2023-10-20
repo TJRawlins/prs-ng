@@ -39,6 +39,7 @@ import { SearchProductPipe } from './product/search-product.pipe';
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { ProductGetComponent } from './product/product-get/product-get.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ReviewComponent } from './review/review/review.component';
 
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
@@ -79,6 +80,7 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     ProductAddComponent,
     ProductGetComponent,
     ProductEditComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule, 
