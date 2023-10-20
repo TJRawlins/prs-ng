@@ -34,6 +34,11 @@ export class RequestService {
   }
   
   // Status Update
+
+
+  // setReview(req: Request): Observable<any> {
+  //   return this.http.put(`${this.url}/review/${req.id}`, req) as Observable<any>
+  // }
   review(req: Request): Observable<any> {
     return this.http.put(`${this.url}/review/${req.id}`, req) as Observable<any>
   }

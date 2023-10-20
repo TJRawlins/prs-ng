@@ -12,15 +12,17 @@
                 <td><div>Order ID: </div><div class="div-data">{{req.id}}</div></td>
                 <td><div>Description: </div><div class="div-data">{{req.description}}</div></td>
                 <td><div>Justification: </div><div class="div-data">{{req.justification}}</div></td>
-                <td><div>Rejection Reason: </div><div class="div-data">{{req.rejectionReason}}</div></td>
+                <!-- <td><div>Rejection Reason: </div><div class="div-data">{{req.rejectionReason}}</div></td> -->
                 <td><div>Delivery Mode: </div><div class="div-data">{{req.deliveryMode}}</div></td>
                 <td><div>Status: </div><div appStatusColor class="div-data" id="status">{{req.status}}</div></td>
                 <td><div>Total: </div><div class="div-data">{{req.total | currency}}</div></td>
-                <td><div>User: </div><div class="div-data">{{user.firstname + ' ' + user.lastname}}</div></td>
+                <!-- <td><div>User: </div><div class="div-data">{{user.firstname + ' ' + user.lastname}}</div></td> -->
+                <td><div>User: </div><div class="div-data">{{user.username}}</div></td>
                 <td>
-                    <span class="btn-span"><button (click)="approve()" class="btn-circle stat-green">APPROVE</button></span>
+                    <span class="btn-span"><button (click)="review()" class="btn-circle stat-green sfv">SUBMIT FOR REVIEW</button></span>
+                    <!-- <span class="btn-span"><button (click)="approve()" class="btn-circle stat-green">APPROVE</button></span>
                     <span class="btn-span"><button (click)="review()" class="btn-circle stat-orange">REVIEW</button></span>
-                    <span class="btn-span"><button (click)="reject()" class="btn-circle stat-red">REJECT</button></span>
+                    <span class="btn-span"><button (click)="reject()" class="btn-circle stat-red">REJECT</button></span> -->
                 </td>
             </tr>
         </tbody>
