@@ -17,7 +17,7 @@
                 <th>Delivery Mode<i class="fa-solid fa-sort" (click)="sortOrder('deliveryMode')"></i></th>
                 <th>Status<i class="fa-solid fa-sort" (click)="sortOrder('status')"></i></th>
                 <th>Total<i class="fa-solid fa-sort" (click)="sortOrder('total')"></i></th>
-                <th>User<i class="fa-solid fa-sort" (click)="sortOrder('user')"></i></th>
+                <th>User<i class="fa-solid fa-sort" (click)="sortOrder('username')"></i></th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -31,7 +31,8 @@
                 <td>{{r.deliveryMode}}</td>
                 <td appStatusColor class="status">{{r.status}}</td>
                 <td>{{r.total | currency}}</td>
-                <td>{{r.user?.username}}</td>
+                <!-- <td>{{r.user?.username}}</td> -->
+                <td>{{r.username}}</td>
                 <td><a [routerLink]="['/requests/get/', r.id]">Details</a> | 
                     <a [routerLink]="['/requests/edit/', r.id]">Edit</a> | 
                     <a [routerLink]="['/requests/lines/', r.id]">Lines</a>

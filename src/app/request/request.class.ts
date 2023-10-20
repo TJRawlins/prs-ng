@@ -10,6 +10,7 @@ export class Request {
     status: string = "New";
     total!: number;
     userId!: number;
-    User: User | null = null;
+    user: User | null = null;
     requestLines: Requestline[] | null = null;
+    username: string = "";
 }

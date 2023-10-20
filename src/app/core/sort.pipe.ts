@@ -6,31 +6,20 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SortPipe implements PipeTransform {
 
   transform(arr: any[], column: string = "id", asc: boolean = true): any[] {
+    // console.debug(arr)
     if(typeof arr === "undefined" || typeof arr === null) return arr;
 
     const compareFn = (a: any, b: any): number => {
       let x = null;
       let y = null;
-      if(a[column].username)
-      {
-        x = a[column].username.toString().toLowerCase();
-        y = b[column].username.toString().toLowerCase();
-        console.debug(a[column].username)
-      }
-      else if(a[column]) {
+
+      if(a[column] && b[column]) {
         x = a[column].toString().toLowerCase();
         y = b[column].toString().toLowerCase();
       }
-      else if(a[column].name)
-      {
-        x = a[column].name.toString().toLowerCase();
-        y = b[column].name.toString().toLowerCase();
-      }
       else {
-        // x = typeof a[column] === "number" ? a[column] : a[column].name.toString().toLowerCase();
-        // y = typeof b[column] === "number" ? b[column] : b[column].name.toString().toLowerCase();
-        x = typeof a[column] === "number" ? a[column] : a[column].toString().toLowerCase();
-        y = typeof b[column] === "number" ? b[column] : b[column].toString().toLowerCase();
+        x = typeof a[column] === "number" || "object" ? a[column] : a[column].toString().toLowerCase();
+        y = typeof b[column] === "number" || "object" ? b[column] : b[column].toString().toLowerCase();
       }
       if(x === y) return 0;
       if(asc) {

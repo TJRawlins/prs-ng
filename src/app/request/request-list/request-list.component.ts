@@ -41,6 +41,9 @@ export class RequestListComponent {
       next: (res) => {
         // console.debug(res)
         this.reqs = res as Request[];
+        for(let req of this.reqs) {
+         req.username = req.user!.username
+        }
       },
       error: (err) => console.error(err)
     })
