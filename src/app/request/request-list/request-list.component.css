@@ -106,3 +106,7 @@ a#add-user:hover {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
 }
+
+.disabled {
+    color: silver;
+}

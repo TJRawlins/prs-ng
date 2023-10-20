@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { User } from 'src/app/user/user.class';
+// import { User } from 'src/app/user/user.class';
 import { Request } from '../request.class';
 import { RequestService } from '../request.service';
+import { SystemService } from 'src/app/core/system.service';
 
 
 @Component({
@@ -11,17 +12,19 @@ import { RequestService } from '../request.service';
 })
 export class RequestListComponent {
   reqs!: Request[];
+  user = this.sysSvc.loggedInUser;
   locale: string = 'en';
   substr: string = '';
 
   userId: number = 0;
-  user: User | null = null;
+  // user: User | null = null;
 
   sortCol: string = "description";
   sortAsc: boolean = true;
 
   constructor(
-    private reqSvc: RequestService
+    private reqSvc: RequestService,
+    private sysSvc: SystemService
   ) {}
 
   sortOrder(col: string): void {

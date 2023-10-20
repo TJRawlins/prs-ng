@@ -85,3 +85,7 @@ a#add-entity:hover {
 .fa-sort:hover {
     color: #cacaca;
 }
+
+.disabled {
+    color: silver;
+}

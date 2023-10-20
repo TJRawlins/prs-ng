@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/user/user.class';
 import { UserService } from 'src/app/user/user.service';
 import { Requestline } from 'src/app/requestline/requestline.class';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-request-lines',
@@ -13,6 +14,7 @@ import { Requestline } from 'src/app/requestline/requestline.class';
   styleUrls: ['./request-lines.component.css']
 })
 export class RequestLinesComponent {
+  userLog = this.sysSvc.loggedInUser;
   req: Request = new Request;
   rls: Requestline[] = [];
 
@@ -23,7 +25,8 @@ export class RequestLinesComponent {
     private reqSvc: RequestService,
     private rlSvc: RequestlineService,
     private userSvc: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sysSvc: SystemService
   ) {}
 
   

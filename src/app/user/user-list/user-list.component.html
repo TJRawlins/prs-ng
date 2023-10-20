@@ -32,8 +32,12 @@
                 <td>{{u.email}}</td>
                 <td>{{u.isReviewer | bool:locale}}</td>
                 <td>{{u.isAdmin | bool:locale}}</td>
-                <td><a [routerLink]="['/users/get/', u.id]">Details</a> | 
+                <td *ngIf="user.isAdmin">
+                    <a [routerLink]="['/users/get/', u.id]">Details</a> | 
                     <a [routerLink]="['/users/edit/', u.id]">Edit</a>
+                </td>
+                <td *ngIf="!user.isAdmin">
+                    <a [routerLink]="['/users']" class="disabled">Details | Edit</a>
                 </td>
             </tr>
         </tbody>

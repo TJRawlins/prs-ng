@@ -18,11 +18,14 @@
                 <td><div>Total: </div><div class="div-data">{{req.total | currency}}</div></td>
                 <!-- <td><div>User: </div><div class="div-data">{{user.firstname + ' ' + user.lastname}}</div></td> -->
                 <td><div>User: </div><div class="div-data">{{user.username}}</div></td>
-                <td>
+                <td *ngIf="userLog.isAdmin">
                     <span class="btn-span"><button (click)="review()" class="btn-circle stat-green sfv">SUBMIT FOR REVIEW</button></span>
                     <!-- <span class="btn-span"><button (click)="approve()" class="btn-circle stat-green">APPROVE</button></span>
                     <span class="btn-span"><button (click)="review()" class="btn-circle stat-orange">REVIEW</button></span>
                     <span class="btn-span"><button (click)="reject()" class="btn-circle stat-red">REJECT</button></span> -->
+                </td>
+                <td *ngIf="!userLog.isAdmin">
+                    <span class="btn-span"><button class="btn-circle sfv">SUBMIT FOR REVIEW</button></span>
                 </td>
             </tr>
         </tbody>
@@ -47,10 +50,13 @@
                 <td>{{rl.products?.price | currency}}</td>
                 <td>{{rl.quantity}}</td>
                 <td>{{rl.quantity * rl.products?.price! | currency}}</td>
-                <td id="a-row">
+                <td id="a-row" *ngIf="userLog.isAdmin">
                     <a [routerLink]="['/requestlines/edit/', rl.id]">Edit</a> |
                     <a class="btn-link" (click)="toggleHide(i)">Delete</a>
                     <a class="btn-link confirm hide" (click)="removeRl(rl.id)">Confirm</a>
+                </td>
+                <td id="a-row" *ngIf="!userLog.isAdmin">
+                    <a [routerLink]="['/requests/lines/', rl.id]" class="disabled">Edit | Delete</a>
                 </td>
             </tr>
         </tbody>

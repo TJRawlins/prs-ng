@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../product.class';
 import { ProductService } from '../product.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,6 +10,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductListComponent {
   prods!: Product[];
+  user = this.sysSvc.loggedInUser;
   locale: string = "en";
   substr: string = "";
 
@@ -24,7 +26,8 @@ export class ProductListComponent {
   }
 
   constructor(
-    private prodSvc: ProductService
+    private prodSvc: ProductService,
+    private sysSvc: SystemService
   ) {}
 
   ngOnInit(): void {

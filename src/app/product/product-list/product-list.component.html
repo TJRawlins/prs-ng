@@ -26,8 +26,12 @@
                 <td>{{p.name}}</td>
                 <td>{{p.unit}}</td>
                 <td>{{p.price | currency}}</td>
-                <td><a [routerLink]="['/products/get/', p.id]">Details</a> | 
+                <td *ngIf="user.isAdmin">
+                    <a [routerLink]="['/products/get/', p.id]">Details</a> | 
                     <a [routerLink]="['/products/edit/', p.id]">Edit</a>
+                </td>
+                <td *ngIf="!user.isAdmin">
+                    <a [routerLink]="['/products']" class="disabled">Details | Edit</a>
                 </td>
             </tr>
         </tbody>

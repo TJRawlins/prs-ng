@@ -85,3 +85,7 @@ a#add-user:hover {
 .fa-sort:hover {
     color: #cacaca;
 }
+
+.disabled {
+    color: silver;
+}

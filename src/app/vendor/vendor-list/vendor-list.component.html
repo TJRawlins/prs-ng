@@ -33,8 +33,12 @@
                 <td>{{v.zip}}</td>
                 <td>{{v.phone}}</td>
                 <td>{{v.email}}</td>
-                <td><a [routerLink]="['/vendors/get/', v.id]">Details</a> | 
+                <td *ngIf="user.isAdmin">
+                    <a [routerLink]="['/vendors/get/', v.id]">Details</a> | 
                     <a [routerLink]="['/vendors/edit/', v.id]">Edit</a>
+                </td>
+                <td *ngIf="!user.isAdmin">
+                    <a [routerLink]="['/vendors']" class="disabled">Details | Edit</a>
                 </td>
             </tr>
         </tbody>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Vendor } from '../vendor.class';
 import { VendorService } from '../vendor.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-vendor-list',
@@ -9,12 +10,14 @@ import { VendorService } from '../vendor.service';
 })
 export class VendorListComponent {
   vends!: Vendor[];
+  user = this.sysSvc.loggedInUser;
   substr: string = "";
   sortCol: string = "name";
   sortAsc: boolean = true;
 
   constructor(
-    private vendSvc: VendorService
+    private vendSvc: VendorService,
+    private sysSvc: SystemService
   ) {}
 
   sortOrder(col: string): void {

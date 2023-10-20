@@ -33,8 +33,13 @@
                 <td>{{r.total | currency}}</td>
                 <!-- <td>{{r.user?.username}}</td> -->
                 <td>{{r.username}}</td>
-                <td><a [routerLink]="['/requests/get/', r.id]">Details</a> | 
+                <td *ngIf="user.isAdmin">
+                    <a [routerLink]="['/requests/get/', r.id]">Details</a> | 
                     <a [routerLink]="['/requests/edit/', r.id]">Edit</a> | 
+                    <a [routerLink]="['/requests/lines/', r.id]">Lines</a>
+                </td>
+                <td *ngIf="!user.isAdmin">
+                    <a [routerLink]="['/requests']" class="disabled">Details | Edit | </a>
                     <a [routerLink]="['/requests/lines/', r.id]">Lines</a>
                 </td>
             </tr>

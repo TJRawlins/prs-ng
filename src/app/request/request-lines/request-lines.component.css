@@ -227,3 +227,6 @@ a#add-user:hover {
     color: white;
 }
 
+.disabled {
+    color: silver;
+}
