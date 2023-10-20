@@ -41,6 +41,7 @@ import { ProductGetComponent } from './product/product-get/product-get.component
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ReviewComponent } from './review/review/review.component';
 import { ReviewItemComponent } from './review/review-item/review-item.component';
+import { SearchReviewPipe } from './review/search-review.pipe';
 
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
@@ -83,6 +84,7 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     ProductEditComponent,
     ReviewComponent,
     ReviewItemComponent,
+    SearchReviewPipe,
   ],
   imports: [
     BrowserModule, 

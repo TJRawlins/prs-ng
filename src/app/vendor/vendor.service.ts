@@ -11,9 +11,10 @@ export class VendorService {
 
   /* 
     *** THERE IS A BUG WITH CONFIG.BASEURL -- Will not post vendor, only if all fields blank, or using a string url instead
+    *** UPDATE: Appears to be resolved - unknown resolution
   */
-  // get url() {return `${this.sysSvc.config.baseurl}/api/vendors`};
-  url: string = "http://localhost:5555/api/vendors"
+  get url() {return `${this.sysSvc.config.baseurl}/api/vendors`};
+  // url: string = "http://localhost:5555/api/vendors"
 
   constructor(
     private http: HttpClient,

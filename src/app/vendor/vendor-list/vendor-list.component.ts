@@ -10,7 +10,7 @@ import { VendorService } from '../vendor.service';
 export class VendorListComponent {
   vends!: Vendor[];
   substr: string = "";
-  sortCol: string = "code";
+  sortCol: string = "name";
   sortAsc: boolean = true;
 
   constructor(

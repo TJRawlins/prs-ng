@@ -11,7 +11,11 @@ export class SearchVendorPipe implements PipeTransform {
 
     let selectedVends: Vendor[] = []
     for(let v of vends) {
-      if(v.code.toLowerCase().includes(substr.toLowerCase())) {
+      if(v.code.toLowerCase().includes(substr.toLowerCase()) || 
+      (v.name != null && v.name.toLowerCase().includes(substr.toLowerCase())) ||
+      (v.address != null && v.address.toLowerCase().includes(substr.toLowerCase())) || 
+      (v.phone != null && v.phone.toLowerCase().includes(substr.toLowerCase()))
+      ) {
         selectedVends.push(v);
       }
     }

@@ -11,7 +11,11 @@ export class SearchRequestPipe implements PipeTransform {
 
     let selectedUsers: Request[] = [];
     for(let r of reqs) {
-      if(r.status.toLowerCase().includes(substr.toLowerCase())) {
+      if(r.status.toLowerCase().includes(substr.toLowerCase()) ||
+      (r.description != null && r.description.toLowerCase().includes(substr.toLowerCase())) ||
+      (r.justification != null && r.justification.toLowerCase().includes(substr.toLowerCase())) ||
+      (r.rejectionReason != null && r.rejectionReason.toLowerCase().includes(substr.toLowerCase()))
+      ) {
         selectedUsers.push(r);
       }
     }

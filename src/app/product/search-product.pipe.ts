@@ -11,7 +11,9 @@ export class SearchProductPipe implements PipeTransform {
 
     let selectedItems: Product[] = [];
     for (let p of prods) {
-      if(p.name.toLowerCase().includes(substr.toLowerCase())) {
+      if(p.name.toLowerCase().includes(substr.toLowerCase()) ||
+      (p.partNbr != null && p.partNbr.toLowerCase().includes(substr.toLowerCase()))
+      ) {
         selectedItems.push(p)
       }
     }
