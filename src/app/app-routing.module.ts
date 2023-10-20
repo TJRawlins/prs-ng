@@ -24,6 +24,7 @@ import { ProductAddComponent } from './product/product-add/product-add.component
 import { ProductGetComponent } from './product/product-get/product-get.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ReviewComponent } from './review/review/review.component';
+import { ReviewItemComponent } from './review/review-item/review-item.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/login", pathMatch:"full"},
@@ -50,6 +51,7 @@ const routes: Routes = [
   {path: "products/get/:id", component: ProductGetComponent},
   {path: "products/edit/:id", component: ProductEditComponent},
   {path: "reviews", component: ReviewComponent},
+  {path: "reviews/:id", component: ReviewItemComponent},
   {path: "about", component: AboutComponent},
   {path: "**", component: E404Component}
 ]
