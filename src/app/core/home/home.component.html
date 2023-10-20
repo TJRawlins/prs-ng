@@ -1,6 +1,69 @@
 <app-menu></app-menu>
 <div id="table-wrapper">
     <div id="sub-menu">
-        <h4>Welcome {{user.firstname}}!</h4>
+        <h4>Welcome, {{user.firstname + ' ' + user.lastname}}!</h4>
+    </div>
+
+    <div id="card-wrapper">
+        <div id="create-card">
+            <h3><i class="fa-solid fa-user-large"></i>Profile:</h3>
+            <div class="item">
+                <label for="">Firstname</label>
+                <input type="text" name="" id="" [(ngModel)]="user.firstname" readonly>
+            </div>
+            <div class="item">
+                <label for="">Lastname</label>
+                <input type="text" name="" id="" [(ngModel)]="user.lastname" readonly>
+            </div>
+            <div class="item">
+                <label for="">Username</label>
+                <input type="text" name="" id="" [(ngModel)]="user.username" readonly>
+            </div>
+            <div class="item">
+                <label for="">Password</label>
+                <input type="password" name="" id="" [(ngModel)]="user.password" readonly>
+            </div>
+            <div class="item">
+                <label for="">Phone</label>
+                <input type="text" name="" id="" [(ngModel)]="user.phone" readonly>
+            </div>
+            <div class="item">
+                <label for="">Email</label>
+                <input type="text" name="" id="" [(ngModel)]="user.email" readonly>
+            </div>
+            <div class="item item-checkbox">
+                <span class="checkbox-wrapper">
+                    <label for="">Reviewer:</label>
+                    <input type="checkbox" name="" class="checkbox" [(ngModel)]="user.isReviewer" onclick="return false">
+                </span>
+                <span class="checkbox-wrapper">
+                    <label for="">Admin:</label>
+                    <input type="checkbox" name="" class="checkbox" [(ngModel)]="user.isAdmin" onclick="return false">
+                </span>
+            </div>
+        </div>
+    
+        <div id="create-card">
+            <h3>Content-1:</h3>
+            <div class="item">
+                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam praesentium quisquam, veritatis ipsam, cum officiis obcaecati, deleniti provident alias omnis beatae quae veniam eos a repellat perspiciatis consectetur dolor? Cupiditate?</div>
+            </div>
+        </div>
+    
+        <div id="create-card">
+            <h3>Content-2:</h3>
+            <div class="item">
+                <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, aspernatur nisi. Beatae, cupiditate est, eius, hic ullam alias eligendi nemo sit quod fuga minima labore. Delectus sunt quidem animi veritatis!
+                Atque ullam a excepturi eveniet nulla, magnam error eum dolores consequatur fuga quam harum, dignissimos fugiat ex veniam repellat aspernatur consectetur, sint id voluptatum. Consequatur soluta ullam est eum! Reprehenderit.</div>
+            </div>
+        </div>
+    
+        <div id="create-card">
+            <h3>Content-3:</h3>
+            <div class="item">
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio quos ipsum, veritatis, eligendi exercitationem aut sunt aspernatur voluptatem blanditiis ipsam nostrum consequuntur dolorum et molestias repudiandae, at quae est reprehenderit.</div>
+            </div>
+        </div>
+
     </div>
 </div>
