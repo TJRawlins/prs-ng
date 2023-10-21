@@ -144,6 +144,7 @@ export class RequestLinesComponent {
   }
   
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.userLog)
     this.refresh();
   }
   

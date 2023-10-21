@@ -4,6 +4,7 @@ import { RequestService } from '../request.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/user/user.class';
 import { UserService } from 'src/app/user/user.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-request-edit',
@@ -11,12 +12,14 @@ import { UserService } from 'src/app/user/user.service';
   styleUrls: ['./request-edit.component.css']
 })
 export class RequestEditComponent {
+  userL = this.sysSvc.loggedInUser;
   req: Request = new Request();
 
   userId!: number;
   user: User = new User();
 
   constructor(
+    private sysSvc: SystemService,
     private reqSvc: RequestService,
     private userSvc: UserService,
     private route: ActivatedRoute,
@@ -47,6 +50,7 @@ export class RequestEditComponent {
   }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.userL)
     let id = +this.route.snapshot.params['id'];
     this.reqSvc.get(id).subscribe({
       next: (res) => {

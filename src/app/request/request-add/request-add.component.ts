@@ -12,9 +12,10 @@ import { SystemService } from 'src/app/core/system.service';
   styleUrls: ['./request-add.component.css']
 })
 export class RequestAddComponent {
+  userL = this.sysSvc.loggedInUser;
+  uId = this.sysSvc.loggedInUser.id;
   req: Request = new Request();
   user!: User;
-  uId = this.sysSvc.loggedInUser.id;
 
 
   constructor(
@@ -40,6 +41,7 @@ export class RequestAddComponent {
   }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.userL)
     let id = this.uId
     console.log(this.uId)
     this.userSvc.get(id).subscribe({

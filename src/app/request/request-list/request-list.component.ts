@@ -40,6 +40,7 @@ export class RequestListComponent {
   // BUG: Not pulling the user
   // FIXED: Added 'return await _context.Requests.Include(x => x.User).ToListAsync();' to Backend Request Controller (GET)
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.user)
     this.reqSvc.list().subscribe({
       next: (res) => {
         // console.debug(res)

@@ -13,4 +13,8 @@ export class HomeComponent {
     private sysSvc: SystemService,
   ) {}
 
+  ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.user)
+  }
+
 }

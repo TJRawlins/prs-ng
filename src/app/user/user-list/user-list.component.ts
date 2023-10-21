@@ -9,10 +9,10 @@ import { SystemService } from 'src/app/core/system.service';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent {
+  user = this.sysSvc.loggedInUser;
   users!: User[];
   locale: string= "en";
   substr: string= "";
-  user = this.sysSvc.loggedInUser;
 
   sortCol: string = "firstname";
   sortAsc: boolean = true;
@@ -32,11 +32,12 @@ export class UserListComponent {
   }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.user)
     this.userSvc.list().subscribe({
       next: (res) => {
         // console.debug(res)
         this.users = res as User[]
-        console.debug(this.user.isAdmin)
+        // console.debug(this.user.isAdmin)
       },
       error: (err) => console.error(err)
     })

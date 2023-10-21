@@ -9,8 +9,8 @@ import { SystemService } from 'src/app/core/system.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  prods!: Product[];
   user = this.sysSvc.loggedInUser;
+  prods!: Product[];
   locale: string = "en";
   substr: string = "";
 
@@ -31,6 +31,7 @@ export class ProductListComponent {
   ) {}
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.user)
     this.prodSvc.list().subscribe({
       next: (res) => {
         // console.debug(res)

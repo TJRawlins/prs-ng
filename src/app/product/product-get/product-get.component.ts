@@ -4,6 +4,7 @@ import { Vendor } from 'src/app/vendor/vendor.class';
 import { ProductService } from '../product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VendorService } from 'src/app/vendor/vendor.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-product-get',
@@ -11,12 +12,14 @@ import { VendorService } from 'src/app/vendor/vendor.service';
   styleUrls: ['./product-get.component.css']
 })
 export class ProductGetComponent {
+  user = this.sysSvc.loggedInUser;
   prod: Product = new Product();
   
   vendorId!: number;
   vend: Vendor = new Vendor();
 
   constructor(
+    private sysSvc: SystemService,
     private prodSvc: ProductService,
     private vendSvc: VendorService,
     private route: ActivatedRoute,
@@ -54,6 +57,7 @@ export class ProductGetComponent {
 
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.user)
     let id = +this.route.snapshot.params['id'];
     this.prodSvc.get(id).subscribe({
       next: (res) => {

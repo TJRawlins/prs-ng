@@ -1,0 +1,15 @@
+#error-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    height: 100%;
+}
+
+.error {
+    font-size: 8rem;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    width: 70vw;
+}

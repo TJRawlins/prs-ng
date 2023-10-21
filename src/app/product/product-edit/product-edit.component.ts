@@ -4,6 +4,7 @@ import { ProductService } from '../product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Vendor } from 'src/app/vendor/vendor.class';
 import { VendorService } from 'src/app/vendor/vendor.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-product-edit',
@@ -11,10 +12,12 @@ import { VendorService } from 'src/app/vendor/vendor.service';
   styleUrls: ['./product-edit.component.css']
 })
 export class ProductEditComponent {
+  user = this.sysSvc.loggedInUser;
   prod: Product = new Product();
   vends!: Vendor[];
 
   constructor(
+    private sysSvc: SystemService,
     private prodSvc: ProductService,
     private vendSvc: VendorService,
     private route: ActivatedRoute,
@@ -36,6 +39,7 @@ export class ProductEditComponent {
   }
 
   getVends(): void {
+    this.sysSvc.isLoggedIn(this.user)
     this.vendSvc.list().subscribe({
       next: (res) => {
         console.debug(res)

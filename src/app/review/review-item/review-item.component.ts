@@ -6,6 +6,7 @@ import { Requestline } from 'src/app/requestline/requestline.class';
 import { RequestlineService } from 'src/app/requestline/requestline.service';
 import { User } from 'src/app/user/user.class';
 import { UserService } from 'src/app/user/user.service';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-review-item',
@@ -13,6 +14,7 @@ import { UserService } from 'src/app/user/user.service';
   styleUrls: ['./review-item.component.css']
 })
 export class ReviewItemComponent {
+  userL = this.sysSvc.loggedInUser;
   req: Request = new Request;
   rls: Requestline[] = [];
 
@@ -20,8 +22,8 @@ export class ReviewItemComponent {
   user: User = new User();
 
   constructor(
+    private sysSvc: SystemService,
     private reqSvc: RequestService,
-    private rlSvc: RequestlineService,
     private userSvc: UserService,
     private route: ActivatedRoute,
     private router: Router
@@ -118,6 +120,7 @@ export class ReviewItemComponent {
   }
   
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.userL)
     this.refresh();
   }
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from 'src/app/core/system.service';
 
 @Component({
   selector: 'app-user-get',
@@ -9,9 +10,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./user-get.component.css']
 })
 export class UserGetComponent {
+  userL = this.sysSvc.loggedInUser;
   user: User = new User();
 
   constructor(
+    private sysSvc: SystemService,
     private userSvc: UserService,
     private route: ActivatedRoute,
     private router: Router
@@ -37,6 +40,7 @@ export class UserGetComponent {
   }
 
   ngOnInit(): void {
+    this.sysSvc.isLoggedIn(this.userL)
     let id = +this.route.snapshot.params['id'];
     this.userSvc.get(id).subscribe({
       next: (res) => {

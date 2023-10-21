@@ -10,6 +10,7 @@ import { SystemService } from 'src/app/core/system.service';
   styleUrls: ['./review.component.css']
 })
 export class ReviewComponent {
+  userL = this.sysSvc.loggedInUser;
   reqs!: Request[];
   locale: string = 'en';
   substr: string = '';
@@ -23,8 +24,8 @@ export class ReviewComponent {
   sortAsc: boolean = true;
 
   constructor(
-    private revSvc: ReviewService,
-    private sysSvc: SystemService
+    private sysSvc: SystemService,
+    private revSvc: ReviewService
   ) {}
 
   sortOrder(col: string): void {
@@ -37,15 +38,16 @@ export class ReviewComponent {
   }
 
   ngOnInit(): void {
-      this.revSvc.getReviews(this.loggedUser.id).subscribe({
-      next: (res) => {
-        console.debug(res)
-        this.reqs = res as any;
-        for(let req of this.reqs) {
-          req.username = req.user!.username
-         }
-      },
-      error: (err) => console.error(err)
+    this.sysSvc.isLoggedIn(this.userL)
+    this.revSvc.getReviews(this.loggedUser.id).subscribe({
+    next: (res) => {
+      console.debug(res)
+      this.reqs = res as any;
+      for(let req of this.reqs) {
+        req.username = req.user!.username
+        }
+    },
+    error: (err) => console.error(err)
     })
   }
 }
