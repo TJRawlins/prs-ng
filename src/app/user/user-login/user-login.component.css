@@ -92,7 +92,7 @@ button {
 
 
 /* start welcome animation */
-.welcome {
+/* .welcome {
     background: #ffffff;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
@@ -124,11 +124,11 @@ button {
     opacity: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  }
+    animation: init 0.5s 0.2s cubi-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  } */
      
   /* moveIn */
-  .welcome header,
+  /* .welcome header,
   .welcome a.btn {
     opacity: 0;
     animation: moveIn 2s 3.1s ease forwards;
@@ -222,4 +222,4 @@ button {
     100% {
       opacity: 0;
     }
-  }
+  } */

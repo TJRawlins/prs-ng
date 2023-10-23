@@ -1,0 +1,41 @@
+#about-wrapper {
+    width: 100%;
+}
+
+#about-header {
+    background-color: rgb(11 41 70);}
+
+#about-header div {
+    padding: 4rem;
+    color: white;
+}
+
+#about-header div h3 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#about-header div p {
+    font-size: 1.3rem;
+}
+
+#about-body {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#about-body div#section-1 {
+    display: flex;
+} 
+
+#about-body #product-img {
+    max-width: 1000px;
+    width: 100%;
+    transform: scaleX(-1);
+}
+
+#about-body .content-box {
+    width: 40%;
+    padding: 4rem;
+}
