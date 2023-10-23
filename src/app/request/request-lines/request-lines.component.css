@@ -1,7 +1,7 @@
 #sub-menu {
     display: flex;
     align-items: center;
-    background-color: rgb(45, 121, 192);
+    background-color: var(--primary-color);
     width: 100%;
     min-width: 453.63px;
 }
@@ -26,7 +26,7 @@
 }
 
 .table:first-of-type tbody tr {
-    background-color: white;
+    background-color: var(--text-color-light);
 }
 
 #line-items th, #line-items td {
@@ -50,7 +50,7 @@
 
 #order-item td div {
     width: 100%;
-    color: rgb(45, 121, 192);
+    color: var(--primary-color);
     margin-right: 0.25rem;
 }
 #order-item td div.div-data {
@@ -119,19 +119,19 @@
 
 a {
     text-decoration: none;
-    color: rgb(45, 121, 192);
+    color: var(--primary-color);
 }
 
 a#add-user {
     text-decoration: none;
-    color: #eeeeee;
+    color: var(--text-color-light);
     font-size: 1.25rem;
     font-weight: bold;
     padding: 0.5rem;
 }
 
 a#add-user:hover {
-    color: #ffffff;;
+    color: var(--text-color-light);
 }
 
 #search-wrapper {
@@ -145,20 +145,20 @@ a#add-user:hover {
 }
 
 #search-wrapper input {
-    background-color: rgb(45, 121, 192);
-    color: #eeeeee;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     max-width: 0;
     opacity: 0;
     margin: 0;
     padding: 0;
     border: 0;
-    border-bottom: 1px silver solid;
+    border-bottom: 1px var(--deactivated) solid;
     overflow: hidden;
     transition:  2s;
 }
 
 #search-wrapper input::placeholder {
-    color: #eeeeee;
+    color: var(--text-color-light);
 }
 
 #search-wrapper input:focus {
@@ -173,14 +173,14 @@ a#add-user:hover {
 
 .fa-magnifying-glass {
     font-size: 1rem;
-    color: #eeeeee;;
+    color: var(--text-color-light);;
     cursor: pointer;
     padding: 0;
     transition: opacity 1s ease;
 }
 
 .fa-magnifying-glass:hover {
-    color: #ffffff;
+    color: var(--text-color-light);
 }
 
 .fa-sort {
@@ -214,7 +214,7 @@ a#add-user:hover {
 }
 
 .confirm {
-    color: white;
+    color: var(--text-color-light);
     margin-left: 0.5rem;
     background-color: orange;
     border-radius: 15px;
@@ -224,9 +224,9 @@ a#add-user:hover {
 
 .confirm:hover {
     display: inline-block;
-    color: white;
+    color: var(--text-color-light);
 }
 
 .disabled {
-    color: silver;
+    color: var(--deactivated);
 }

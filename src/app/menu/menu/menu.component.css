@@ -3,7 +3,7 @@
 }
 
 nav {
-    background-color: rgb(45, 121, 192);
+    background-color: var(--secondary-color);
     width: 100%;
     z-index: 999;
 }
@@ -17,13 +17,13 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: #eeeeee;
+    color: var(--text-color-light);
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
 
 nav ul li a:hover {
-    background-color: rgb(40, 106, 168);
+    background-color: var(--primary-color);
 }
 
 nav ul li:last-child {
@@ -40,7 +40,7 @@ nav ul li:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #eeeeee;
+    color: var(--text-color-light);
     text-decoration: none;
     padding: 0.5rem 1rem;
     cursor: default;
@@ -51,6 +51,6 @@ nav ul li:last-child {
 }
 
 .active {
-    background-color: rgb(40, 106, 168);
+    background-color: var(--primary-color);
 }
 

@@ -8,7 +8,7 @@
 }
 
 #create-card {
-    background-color: white;
+    background-color: var(--light-bg);
     display: grid;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +34,7 @@ h3 {
     align-items: flex-end;
     padding: 0;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid var(--deactivated);
 }
 
 #create-card  {
@@ -44,7 +44,7 @@ h3 {
 
 .item i {
     font-size: 1.25rem;
-    color: rgb(45, 121, 192);
+    color: var(--primary-color);
     margin-right: 0.5rem;
     margin-bottom: 0.45rem;;
 }
@@ -86,14 +86,14 @@ button {
 
 #login-error {
     margin-top: 0.25rem;
-    color: red;
+    color: #ff0000;
 }
 
 
 
 /* start welcome animation */
-/* .welcome {
-    background: #ffffff;
+.welcome {
+    background: var(--light-bg);
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
   }
@@ -101,7 +101,7 @@ button {
   .welcome .splash {
     height: 0px;
     padding: 0px;
-    border: 130em solid rgb(45, 121, 192);
+    border: 130em solid var(--secondary-color);
     position: fixed;
     left: 50%;
     top: 100%;
@@ -114,7 +114,7 @@ button {
   }
   
   .welcome #welcome {
-    background: #ffffff ;
+    background: var(--light-bg) ;
     width: 56px;
     height: 56px;
     position: absolute;
@@ -124,11 +124,11 @@ button {
     opacity: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    animation: init 0.5s 0.2s cubi-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  } */
+    animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
      
   /* moveIn */
-  /* .welcome header,
+  .welcome header,
   .welcome a.btn {
     opacity: 0;
     animation: moveIn 2s 3.1s ease forwards;
@@ -138,7 +138,7 @@ button {
     position: absolute;
     top: 12px;
     left:10px;
-    color: rgb(45, 121, 192);;
+    color: var(--primary-color);
     font-size: 2rem;
     font-weight: 700;
   }
@@ -193,15 +193,13 @@ button {
   
   @keyframes moveUp {
     0% {
-      background: #311b92;
+      background: var(--secondary-color);
       top: 100%;
     }
     50% {
       top: 40%;
     }
     100% {
-      top: 50%;
-      background: #039be5;
       display: none;
     }
   }
@@ -222,4 +220,4 @@ button {
     100% {
       opacity: 0;
     }
-  } */
+  }

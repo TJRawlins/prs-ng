@@ -11,7 +11,7 @@
 #create-card {
     position: absolute;
     top: 0;
-    background-color: white;
+    background-color: var(--text-color-light);
     display: grid;
     flex-direction: column;
     justify-content: center;
@@ -34,11 +34,11 @@ h3 {
 .item {
     padding: 0;
     margin-bottom: 1rem;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid var(--deactivated);
     width: 280px;
 }
 .item label {
-    color: rgb(45, 121, 192);;
+    color: var(--primary-color);
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
@@ -56,7 +56,7 @@ h3 {
 
 #btn-container {
     display: flex;
-    justify-content: space-arou;
+    justify-content: space-around;
     gap: 1rem;
     width: 100%;
 }
@@ -68,7 +68,7 @@ button, a {
 
 a {
     display: block;
-    color: whitesmoke;
+    color: var(--text-color-light);
     text-decoration: none;
     width: 100%;
 }

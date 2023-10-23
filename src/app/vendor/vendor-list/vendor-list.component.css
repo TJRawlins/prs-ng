@@ -1,7 +1,7 @@
 #sub-menu {
     display: flex;
     align-items: center;
-    background-color: rgb(45, 121, 192);
+    background-color: var(--primary-color);
     width: 100%;
     min-width: 453.63px;
 }
@@ -13,18 +13,18 @@
 
 a {
     text-decoration: none;
-    color: rgb(45, 121, 192);
+    color: var(--primary-color);
 }
 
 a#add-entity {
     text-decoration: none;
-    color: #eeeeee;
+    color: var(--text-color-light);
     font-weight: bold;
     padding: 0.5rem;
 }
 
 a#add-entity:hover {
-    color: #ffffff;;
+    color: var(--text-color-light);
 }
 
 #search-wrapper {
@@ -38,20 +38,20 @@ a#add-entity:hover {
 }
 
 #search-wrapper input {
-    background-color: rgb(45, 121, 192);
-    color: #eeeeee;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     max-width: 0;
     opacity: 0;
     margin: 0;
     padding: 0;
     border: 0;
-    border-bottom: 1px silver solid;
+    border-bottom: 1px var(--deactivated) solid;
     overflow: hidden;
     transition:  2s;
 }
 
 #search-wrapper input::placeholder {
-    color: #eeeeee;
+    color: var(--text-color-light);
 }
 
 #search-wrapper input:focus {
@@ -66,14 +66,14 @@ a#add-entity:hover {
 
 .fa-magnifying-glass {
     font-size: 1rem;
-    color: #eeeeee;;
+    color: var(--text-color-light);;
     cursor: pointer;
     padding: 0;
     transition: opacity 1s ease;
 }
 
 .fa-magnifying-glass:hover {
-    color: #ffffff;
+    color: var(--text-color-light);
 }
 
 .fa-sort {
@@ -87,5 +87,5 @@ a#add-entity:hover {
 }
 
 .disabled {
-    color: silver;
+    color: var(--deactivated);
 }

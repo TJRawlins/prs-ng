@@ -1,22 +1,19 @@
 #sub-menu {
-    background-color: rgb(45, 121, 192);
+    background-color: var(--header-color);
     display: flex;
     align-items: center;
     width: 100%;
-    /* height: 100% */
     min-width: 453.63px;
 }
 
 #table-wrapper {
-    background-color: #ffff;
+    background-color: var(--text-color-light);
     height: 100%;
-    margin: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 
 h4 {
-    color: #ffff;
+    color: var(--text-color-light);
     padding: 1.5rem;
     margin: 0;
 }
@@ -50,7 +47,7 @@ h4 {
   }
   
   #create-card {
-    background-color: white;
+    background-color: var(--light-bg);
     display: grid;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +61,7 @@ h4 {
 }
 
 .fa-user-large {
-  color: silver;
+  color: var(--deactivated);
   margin-right: 1rem;
   margin-left: 0.35rem;
 }
@@ -82,7 +79,7 @@ h4 {
 }
 
 .item input {
-    color: silver;
+    color: var(--deactivated);
     margin-left: 1rem;
     justify-self: right;
 }
@@ -90,14 +87,14 @@ h4 {
 input, input:focus {
     outline: none;
     border: none;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid var(--deactivated);
 }
 
 .checkbox {
 	-webkit-appearance: none;
     appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
+	background-color: var(--light-bg);
+	border: 1px solid var(--deactivated);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 6px;
 	border-radius: 3px;
@@ -106,22 +103,22 @@ input, input:focus {
 }
 
 .checkbox:active .checkbox:checked:active {
-    background-color: silver;
+    background-color: var(--deactivated);
     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
 }
 
 .checkbox:checked {
-    background-color: #e9ecee;
-	border: 1px solid #adb8c0;
+    background-color: var(--light-bg);
+	border: 1px solid var(--deactivated);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-	color: #99a1a7;
+	color: var(--deactivated);
 }
 
 .checkbox:checked::after {
-    content: '\2714';
+  content: '\2714';
 	font-size: 8px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	color: #99a1a7;
+	color: var(--deactivated);
 }
