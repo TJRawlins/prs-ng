@@ -80,10 +80,33 @@
     color: #1f3152;;
 }
 
+#section-2 {
+    position: relative;
+}
+
+#tech-img {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 490px;
+    width: 100%;
+    mix-blend-mode: screen;
+    filter: grayscale(100%) brightness(5);
+}
+
+#section-2 h4 {
+    position: relative;
+    font-size: 5rem !important;
+    padding-bottom: 1rem;
+    z-index: 1;
+}
+
 #tech-container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    z-index: 1;
 }
 
 .tech-item {
@@ -94,7 +117,7 @@
     margin: 1rem;
     min-width: 400px;
     border: 6px var(--text-color-light) solid;
-    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .tech-item ul {
@@ -116,16 +139,16 @@
     text-align: center;
     padding: 0.5rem;
     margin: 0;
-    border-radius: 12px 12px 0 0;
+    /* border-radius: 12px 12px 0 0; */
 }
 
 .tech-item h5 i, .tech-item ul li i {
     margin-right: 1rem;
 }
 .tech-item ul li i{
-    width: 30px;
+    width: 3rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 
