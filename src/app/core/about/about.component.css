@@ -43,9 +43,9 @@
 } 
 
 #about-body #product-img {
-    max-width: 800px;
-    width: 100%;
-    transform: scaleX(-1) translateY(-100px);
+    width: 50%;
+    height: 40%;
+    padding: 3rem;
 }
 
 #about-body .content-box {
@@ -66,6 +66,35 @@
     text-align: center;
 }
 
+h4:last-of-type {
+    margin-top: 2rem;
+}
+
+.credit-name {
+    margin: 0;
+    padding: 0;
+}
+
+#code-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 15px;
+    border: 1px silver solid;
+}
+
+.code-item:first-of-type {
+    padding-right: 1.5rem;
+    border-right: 1px silver solid;
+}
+
+.code-img {
+    width: 150px;
+}
+
 .btn {
     background-color: #1f3152;
     color: var(--text-color-light);
@@ -79,6 +108,8 @@
     background-color: orange;
     color: #1f3152;;
 }
+
+/* -*-*-*-*-*-*-*-* TECHNOLOGY *-*-*-*-*-*-*-*-* */
 
 #section-2 {
     position: relative;
@@ -116,6 +147,7 @@
     background-color: var(--text-color-light);
     margin: 1rem;
     min-width: 400px;
+    height: 325px;
     border: 6px var(--text-color-light) solid;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
