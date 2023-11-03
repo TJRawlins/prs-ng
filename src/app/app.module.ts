@@ -43,6 +43,9 @@ import { ReviewComponent } from './review/review/review.component';
 import { ReviewItemComponent } from './review/review-item/review-item.component';
 import { SearchReviewPipe } from './review/search-review.pipe';
 
+// HASH ROUTING
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+
 
 export const startupServiceFactory = (sysSvc: SystemService) => {
   return () => sysSvc.getSettings();
@@ -91,7 +94,7 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
     HttpClientModule, 
     FormsModule, 
     DatePipe, 
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     SystemService, {
@@ -99,7 +102,9 @@ export const startupServiceFactory = (sysSvc: SystemService) => {
       useFactory: startupServiceFactory,
       deps: [SystemService],
       multi: true
-    }
+    },
+    // HASH ROUTING
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })

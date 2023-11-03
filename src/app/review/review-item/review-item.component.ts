@@ -109,8 +109,8 @@ export class ReviewItemComponent {
         // console.debug(res);
         this.req = res;
 
-        console.debug(res)
-        console.debug(res.requestLines)
+        // console.debug(res)
+        // console.debug(res.requestLines)
         
         this.statusColor();
         this.userId = res.userId as number;

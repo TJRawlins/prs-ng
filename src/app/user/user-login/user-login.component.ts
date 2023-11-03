@@ -25,7 +25,6 @@ export class UserLoginComponent {
     this.loginSvc.loginSvc(this.user.username, this.user.password).subscribe({
       next: (res) => {
         this.sysSvc.loggedInUser = res;
-        // this.router.navigateByUrl("/request-list");
         this.router.navigateByUrl("/home");
       },
       error: (err) => err.status === 404 ? this.message = "Invalid username or password" : console.debug(err)
